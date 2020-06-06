@@ -7,9 +7,23 @@
              x:Class="ReforceCross.Views.CadastroProfessor">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to bem vindo ao cadastro"
+            <StackLayout Orientation="Vertical" Padding="30">
+                <Label Text="Favor realizar cadastro"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                <Label Text="Nome:"/>
+                <Entry x:Name="profNome"></Entry>
+                <Picker x:Name="profDisciplina" SelectedIndex="1"/>
+                <Label Text="Bairro:"/>
+                <Entry x:Name="profBairro"></Entry>
+                <Label Text="Usuário:"/>
+                <Entry x:Name="profUsuario"></Entry>
+                <Label Text="Senha:"/>
+                <Entry x:Name="profSenha" IsPassword="True"></Entry>
+                <Label Text="Confirmar senha:"/>
+                <Entry x:Name="profSenhaConfirm" IsPassword="True"></Entry>
+                <Button Text="Cadastrar" Clicked="btnSalvar_Click"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

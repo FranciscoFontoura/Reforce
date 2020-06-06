@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.SqlClient;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ReforceCross.Models;
 
 namespace ReforceCross.Views
 {
@@ -22,5 +23,5 @@ namespace ReforceCross.Views
             await Navigation.PushAsync(new CadastroProfessor());
         }
     }
-};
+}
 

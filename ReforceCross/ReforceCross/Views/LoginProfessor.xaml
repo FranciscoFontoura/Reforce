@@ -14,7 +14,7 @@
                 Padding="30"
                 Margin="0,50,0,0">
                 <Entry Placeholder="Usuário" x:Name="User"/>
-                <Entry Placeholder="Senha" IsPassword="True" x:Name="Password"/>
+                <Entry Placeholder="Senha" IsPassword="True" x:Name="Password" />
                 <StackLayout Orientation="Horizontal">
                     <Switch IsToggled="False"/>
                     <Label Text="Lembrar senha neste dispositvo?" FontSize="Small" VerticalOptions="Center"/>
