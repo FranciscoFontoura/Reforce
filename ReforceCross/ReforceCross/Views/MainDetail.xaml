@@ -5,20 +5,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ReforceCross.Views.MainDetail"
-             Title="Detail">
-    <StackLayout Padding="10">
-        <Label Text="asssss"/>
+             Title="Detail"
+             NavigationPage.HasBackButton="True"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <Label Text="Lista de Professores" FontSize="Header"/>
+        <ListView x:Name="profContatos"
+              ItemsSource="{Binding Professor}"
+              HasUnevenRows="True"
+              ItemTapped="profContatos_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5">
+                            <StackLayout BackgroundColor="#F3F5F5" Orientation="Vertical" Padding="5">
+                            <StackLayout Orientation="Horizontal" >
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding NOME}" FontSize="Title"></Label>
+                                    <Label Text="{Binding SOBRENOME}" FontSize="Title"></Label>
+                                     <Label Text="{Binding }" FontSize="Title"></Label>
+                                    </StackLayout>
+                            </StackLayout>
+                            <Label Text="{Binding VALORAULA, StringFormat='Valor da hora R$ {0:F2}'}"></Label>
+                        </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 
-    <!--<ListView x:Name="profContatos"
-              ItemsSource="{Binding Items}"
-              HasUnevenRows="True">
-
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Nome}" Detail="{Binding Disciplina}"                         
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>-->
-        
 </ContentPage>

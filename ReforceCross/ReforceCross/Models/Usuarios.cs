@@ -6,11 +6,9 @@ namespace ReforceCross.Models
 {
     class Usuarios
     {
-        public int idProfessor { get; set; }
-        public string nome { get; set; }
-        public string disciplina { get; set; }
-        public string bairro { get; set; }
-        public string usuario { get; set; }
-        public string senha { get; set; }
-    }
+		public int ID { get; set; }
+		public string LOGINUSER { get; set; }
+		public string TIPOUSUARIO { get; set; }
+		public int IDPROF { get; set; }
+	}
 }

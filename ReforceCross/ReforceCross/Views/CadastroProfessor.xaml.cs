@@ -28,7 +28,7 @@ namespace ReforceCross.Views
         {
             if (profSenha.Text == profSenhaConfirm.Text)
             {
-                SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;Integrated Security=True;");
+                SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;User Id=sa;Password=123456;");
 
                 string SQL = "INSERT INTO Professor (nome, disciplina, bairro, usuario, senha) values (@nome, @disciplina, @bairro, @usuario, @senha)";
 
