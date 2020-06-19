@@ -29,7 +29,7 @@ namespace ReforceCross.ViewModel
 
             if (query == "")
             {
-                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;User Id=sa;Password=123456;"))
+                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
                 {
                     professores = connection.Query<Professor>("SELECT * FROM PROFESSOR").ToList();
 
@@ -38,7 +38,7 @@ namespace ReforceCross.ViewModel
             }
             else
             {
-                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;User Id=sa;Password=123456;"))
+                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
                 {
                     professores = connection.Query<Professor>($"SELECT * FROM PROFESSOR WHERE BAIRRO='{query}'").ToList();
 
