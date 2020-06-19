@@ -16,11 +16,17 @@ namespace ReforceCross.Views
         public LoginProfessor()
         {
             InitializeComponent();
+            string senha = User.ToString();
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CadastroProfessor());
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

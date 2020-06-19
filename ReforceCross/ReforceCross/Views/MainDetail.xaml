@@ -10,6 +10,7 @@
              NavigationPage.HasNavigationBar="False">
     <StackLayout>
         <Label Text="Lista de Professores" FontSize="Header"/>
+        <Picker x:Name="picker_bairros" SelectedIndexChanged="picker_bairros_SelectedIndexChanged"></Picker>
         <ListView x:Name="profContatos"
               ItemsSource="{Binding Professor}"
               HasUnevenRows="True"
@@ -19,15 +20,14 @@
                     <ViewCell>
                         <StackLayout Padding="5">
                             <StackLayout BackgroundColor="#F3F5F5" Orientation="Vertical" Padding="5">
-                            <StackLayout Orientation="Horizontal" >
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding NOME}" FontSize="Title"></Label>
-                                    <Label Text="{Binding SOBRENOME}" FontSize="Title"></Label>
-                                     <Label Text="{Binding }" FontSize="Title"></Label>
+                                <StackLayout Orientation="Horizontal" >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding NOME}" FontSize="Title"></Label>
+                                        <Label Text="{Binding SOBRENOME}" FontSize="Title"></Label>
                                     </StackLayout>
+                                </StackLayout>
+                                <Label Text="{Binding VALORAULA, StringFormat='Valor da hora R$ {0:F2}'}"></Label>
                             </StackLayout>
-                            <Label Text="{Binding VALORAULA, StringFormat='Valor da hora R$ {0:F2}'}"></Label>
-                        </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

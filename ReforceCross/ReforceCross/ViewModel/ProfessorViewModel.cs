@@ -16,20 +16,36 @@ namespace ReforceCross.ViewModel
         public ObservableCollection<Professor> Professor { get; set; }
         public ProfessorViewModel()
         {
-            Professor = new ObservableCollection<Professor>(LoadList() as List<Professor>);
+            Professor = new ObservableCollection<Professor>(LoadList("") as List<Professor>);
+        }
+        public ProfessorViewModel(string query)
+        {
+            Professor = new ObservableCollection<Professor>(LoadList(query) as List<Professor>);
         }
 
-        public List<Professor> LoadList()
+        public List<Professor> LoadList(string query)
         {
             List<Professor> professores = new List<Professor>();
-            
-            using (IDbConnection connection =
-                new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;User Id=sa;Password=123456;"))
-            {
-                professores = connection.Query<Professor>("SELECT * FROM PROFESSOR P JOIN DISCIPLINASEPROFESSORES DP ON P.IDPROF=DP.IDPROF JOIN DISCIPLINA D ON D.IDMATERIA=DP.IDMATERIA").ToList();
 
+            if (query == "")
+            {
+                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;User Id=sa;Password=123456;"))
+                {
+                    professores = connection.Query<Professor>("SELECT * FROM PROFESSOR").ToList();
+
+                }
+                return professores;
             }
-            return professores;
+            else
+            {
+                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;User Id=sa;Password=123456;"))
+                {
+                    professores = connection.Query<Professor>($"SELECT * FROM PROFESSOR WHERE BAIRRO='{query}'").ToList();
+
+                }
+                return professores;
+            }
+
         }
 
     }
