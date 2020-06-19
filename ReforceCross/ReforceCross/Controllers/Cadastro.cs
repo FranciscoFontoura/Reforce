@@ -17,7 +17,7 @@ namespace ReforceCross.Controllers
             SqlMoney valor, string loginuser, string senha, char tipousuario)
         {
 
-            Sql = " insert into PROFESSOR (DTCADASTRO, NOME, SOBRENOME, CEP, RUA, BAIRRO, CIDADE,UF, NUMERO, COMPLEMENTO, FIXO, CELULAR, MAIL, DISPONIBILIDADE, VALORAULA) values(@dtcadastro, @nome, @sobrenome, @cep, @rua, @bairro, @cidade, @uf, @numero, @complemento, @fixo, @celular, @mail, @disp, @valor)";
+            Sql = " insert into PROFESSOR (DTCADASTRO, NOME, SOBRENOME, CEP, RUA, BAIRRO, CIDADE,UF, NUMERO, COMPLEMENTO, FIXO, CELULAR, MAIL, VALORAULA) values(@dtcadastro, @nome, @sobrenome, @cep, @rua, @bairro, @cidade, @uf, @numero, @complemento, @fixo, @celular, @mail, @valor)";
             Sql += " insert into USUARIO(LOGINUSER,SENHA, TIPOUSUARIO) VALUES(@loginuser, @senha, @tipousuario)";
             Command = new SqlCommand(Sql);
 
@@ -35,7 +35,6 @@ namespace ReforceCross.Controllers
             Command.Parameters.AddWithValue("@mail", mail);
             Command.Parameters.AddWithValue("@fixo", fixo);
             Command.Parameters.AddWithValue("@celular", celular);
-            Command.Parameters.AddWithValue("@disp", disp);
             Command.Parameters.AddWithValue("@valor", valor);
             Command.Parameters.AddWithValue("@loginuser", loginuser);
             Command.Parameters.AddWithValue("@senha", senha);

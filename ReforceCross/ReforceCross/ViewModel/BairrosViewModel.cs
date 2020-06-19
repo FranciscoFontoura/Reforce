@@ -21,7 +21,7 @@ namespace ReforceCross.ViewModel
         public List<Bairros> LoadList()
         {
             List<Bairros> bairros = new List<Bairros>();
-            using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=ReforceDB;User Id=sa;Password=123456;"))
+            using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
             {
                 bairros = connection.Query<Bairros>("SELECT DISTINCT BAIRRO FROM PROFESSOR").ToList();
             }

@@ -8,9 +8,28 @@
              Title="{Binding NOME}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{Binding SOBRENOME}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding NOME}" FontSize="Large"/>
+                <Label Text="{Binding SOBRENOME}" FontSize="Large"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Endereço: "/>
+                <Label Text="{Binding RUA, StringFormat='Rua {0}, '}"/>
+                <Label Text="{Binding NUMERO, StringFormat='{0}, '}"/>
+                <Label Text="{Binding COMPLEMENTO, StringFormat='{0}, '}"/>
+                <Label Text="{Binding BAIRRO, StringFormat='{0}.'}"/>
+            </StackLayout>
+            <Label Text="Entre em contato com o professor em um dos telefones abaixo!"/>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fixo:"/>
+                    <Label Text="{Binding FIXO}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Celular:"/>
+                    <Label Text="{Binding CELULAR}"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -37,7 +37,7 @@ namespace ReforceCross.Views
                     new MainMasterMenuItem { Id = 1, Title = "Page 2" },
                     new MainMasterMenuItem { Id = 2, Title = "Page 3" },
                     new MainMasterMenuItem { Id = 3, Title = "Page 4" },
-                    new MainMasterMenuItem { Id = 4, Title = "Page 5" },
+                    new MainMasterMenuItem { Id = 4, Title = "Voltar a página principal" },
                 });
             }
 
