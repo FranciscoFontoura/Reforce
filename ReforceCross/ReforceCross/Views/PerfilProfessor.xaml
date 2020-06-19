@@ -7,14 +7,32 @@
              x:Class="ReforceCross.Views.PerfilProfessor">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" >
-            <Label Text="Perfil do Professor"/>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="{Binding NOME}"/>
-                <Label Text="{Binding SOBRENOME}"/>
+            <Label Text="Perfil do Professor" FontSize="Header"/>
+            <StackLayout Padding="5">
+                <StackLayout BackgroundColor="#F3F5F5" Orientation="Vertical" Padding="5">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding NOME}" FontSize="Title"></Label>
+                        <Label Text="{Binding SOBRENOME}" FontSize="Title"></Label>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Bairro: "/>
-            <Label Text="{Binding BAIRRO}"/>
+                <Label Text="Endereço"/>
+                <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding RUA}" FontSize="Title"></Label>
+                            <Label Text="{Binding NÚMERO}" FontSize="Title"></Label>
+                            <Label Text="{Binding COMPLEMENTO}" FontSize="Title"></Label>
+                            <Label Text="{Binding BAIRRO}" FontSize="Title"></Label>
+             </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding CEP}" FontSize="Title"></Label>
+                            <Label Text="{Binding CIDADE}" FontSize="Title"></Label>
+                            <Label Text="{Binding UF}" FontSize="Title"></Label>
+                        </StackLayout>
+                <StackLayout Orientation="Vertical" >
+                            <Label Text="{Binding MAIL}" FontSize="Title"></Label>
+                            <Label Text="{Binding TELEFONE CELUAR}" FontSize="Title"></Label>
+                            <Label Text="{Binding TELEFONE FIXO}" FontSize="Title"></Label>
+                            <Label Text="{Binding VALOR AULA}" FontSize="Title"></Label>
+                </StackLayout>                     
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
