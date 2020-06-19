@@ -31,18 +31,18 @@ namespace ReforceCross.ViewModel
 
             if (query == "")
             {
-                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
+                using (IDbConnection connection = new SqlConnection(@"Data Source=DESKTOP-99ATQQ4;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
                 {
-                    professores = connection.Query<Professor>("SELECT * FROM PROFESSOR").ToList();
+                    professores = connection.Query<Professor>("SELECT P.*,D.NOME AS DISCIPLINA FROM PROFESSOR P JOIN DISCIPLINASEPROFESSORES DP ON P.ID = DP.IDPROF JOIN DISCIPLINAS D ON DP.IDMATERIA = D.ID; ").ToList();
 
                 }
                 return professores;
             }
             else
             {
-                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
+                using (IDbConnection connection = new SqlConnection(@"Data Source =DESKTOP-99ATQQ4; Initial Catalog = DBTRABALHO;User Id= sa;Password = 1234"))
                 {
-                    professores = connection.Query<Professor>($"SELECT * FROM PROFESSOR WHERE BAIRRO='{query}'").ToList();
+                    professores = connection.Query<Professor>($"SELECT P.*,D.NOME AS DISCIPLINA FROM PROFESSOR P JOIN DISCIPLINASEPROFESSORES DP ON P.ID = DP.IDPROF JOIN DISCIPLINAS D ON DP.IDMATERIA = D.ID WHERE BAIRRO = '{query}'").ToList();
 
                 }
                 return professores;
