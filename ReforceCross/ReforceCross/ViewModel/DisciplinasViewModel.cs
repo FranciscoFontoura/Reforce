@@ -25,7 +25,7 @@ namespace ReforceCross.ViewModel
             List<Disciplinas> disciplinas = new List<Disciplinas>();
 
             using (IDbConnection connection =
-                new SqlConnection(@"Data Source =.\SQLEXPRESS; Initial Catalog = DBTRABALHO;User Id= sa;Password = 1234"))
+                new SqlConnection(@"Data Source =DESKTOP-99ATQQ4; Initial Catalog = DBTRABALHO;User Id= sa;Password = 1234"))
             {
                 disciplinas = connection.Query<Disciplinas>("SELECT * FROM DISCIPLINAS").ToList();
             }

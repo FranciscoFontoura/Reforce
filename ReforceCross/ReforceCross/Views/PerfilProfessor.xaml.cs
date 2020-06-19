@@ -21,7 +21,7 @@ namespace ReforceCross.Views
             InitializeComponent();
             List<Professor> professor = new List<Professor>();
 
-            using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
+            using (IDbConnection connection = new SqlConnection(@"Data Source =DESKTOP-99ATQQ4; Initial Catalog = DBTRABALHO;User Id= sa;Password = 1234"))
             {
                 professor = connection.Query<Professor>($"SELECT * FROM PROFESSOR WHERE ID='{usuarios.IDPROF}'").ToList();
             }

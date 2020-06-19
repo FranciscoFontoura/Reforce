@@ -21,5 +21,7 @@ namespace ReforceCross.Models
 		public string CELULAR { get; set; }
 		public string MAIL { get; set; }
 		public decimal VALORAULA { get; set; }
+
+		public string DISCIPLINA { get; set; }
 	}
 }

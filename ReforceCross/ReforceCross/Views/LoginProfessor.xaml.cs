@@ -36,7 +36,7 @@ namespace ReforceCross.Views
             }
             else
             {
-                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
+                using (IDbConnection connection = new SqlConnection(@"Data Source =DESKTOP-99ATQQ4; Initial Catalog = DBTRABALHO;User Id= sa;Password = 1234"))
                 {
                     usuario = connection.Query<Usuarios>($"SELECT * FROM USUARIO WHERE LOGINUSER='{User.Text}'").ToList();
                 }

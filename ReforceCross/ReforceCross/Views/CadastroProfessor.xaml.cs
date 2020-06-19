@@ -11,6 +11,9 @@ using Xamarin.Forms.Internals;
 using ReforceCross.Controllers;
 using ReforceCross.ViewModel;
 using ReforceCross.Models;
+using System.Security.Cryptography.X509Certificates;
+using Dapper;
+using System.Data;
 
 namespace ReforceCross.Views
 {
@@ -20,7 +23,7 @@ namespace ReforceCross.Views
         public CadastroProfessor()
         {
             InitializeComponent();
-            
+
             profDisciplina.Title = "Selecione uma Disciplina";
             List<Disciplinas> disciplinas = new DisciplinasViewModel().LoadList();
 
@@ -30,7 +33,7 @@ namespace ReforceCross.Views
             }
 
         }
-
+//Ação do clique do botão de cadastro
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
             if (profSenha.Text == profSenhaConfirm.Text)
@@ -53,17 +56,33 @@ namespace ReforceCross.Views
                     SqlMoney.Parse(profValor.Text),
                     profUsuario.Text,
                     profSenha.Text,
+                    GetIdMateria(),
                     'P'
-                    );
-                DisplayAlert("Cadastro Concluido", "Vlw!", "Ok!");
+                    ); ;
+                DisplayAlert("Cadastro Concluido Com Sucesso", "Obrigado", "!");
                 await Navigation.PushAsync(new MainPage());
-                /*public void Cadastrar(DateTime dtcadastro, string nome, string sobrenome, string cep, string rua, string bairro,
-            string cidade, string uf, int numero, string complemento, string mail, string fixo, string celular,
-            SqlMoney valor, string loginuser, string senha, char tipousuario)*/
+
             }
             else
             {
                 DisplayAlert("As duas senhas são diferentes!", "favor colocar senhas iguais", "OK!");
+            }
+        }
+
+        //Método que busca a ID da matéria
+        private int GetIdMateria()
+        {
+            List<int> id = new List<int>();
+            using (IDbConnection connection = new SqlConnection(@"Data Source=DESKTOP-99ATQQ4;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
+            {
+                id = connection.Query<int>($"SELECT ID FROM DISCIPLINAS WHERE NOME = '{profDisciplina.SelectedItem}'").AsList();
+
+                int a = 0;
+                foreach (int x in id)
+                {
+                    a = x;
+                }
+                return a;
             }
         }
     }
