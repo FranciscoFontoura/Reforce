@@ -29,15 +29,16 @@
                     <Entry x:Name="profUf"></Entry>
                     <Label Text="Numero:"/>
                     <Entry x:Name="profNumero"></Entry>
-                    <Label Text="Complemento:"/>
-                    <Entry x:Name="profComplemento"></Entry>
-                    <Picker x:Name="profDisciplina" SelectedIndex="1"/>
+                    <Picker x:Name="profDisciplina" SelectedIndex="-1"/>
                     <Label Text="Mail:"/>
                     <Entry x:Name="profMail"></Entry>
                     <Label Text="Telefone Celular:"/>
                     <Entry x:Name="profCel"></Entry>
+                    <Label Text="Complemento:"/>
+                    <Entry x:Name="profComplemento"></Entry>
                     <Label Text="Telefone Fixo:"/>
                     <Entry x:Name="profFixo"></Entry>
+                    <Picker x:Name="profDisponibilidade" SelectedIndex="-1"/>
                     <Label Text="Valor da aula:"/>
                     <Entry x:Name="profValor"></Entry>
                     <Label Text="Usuário:"/>
