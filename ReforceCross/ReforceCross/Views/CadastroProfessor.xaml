@@ -6,24 +6,49 @@
              mc:Ignorable="d"
              x:Class="ReforceCross.Views.CadastroProfessor">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout Orientation="Vertical" Padding="30">
-                <Label Text="Favor realizar cadastro"
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Orientation="Vertical" Padding="30">
+                    <Label Text="Favor realizar cadastro"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-                <Label Text="Nome:"/>
-                <Entry x:Name="profNome"></Entry>
-                <Picker x:Name="profDisciplina" SelectedIndex="1"/>
-                <Label Text="Bairro:"/>
-                <Entry x:Name="profBairro"></Entry>
-                <Label Text="Usuário:"/>
-                <Entry x:Name="profUsuario"></Entry>
-                <Label Text="Senha:"/>
-                <Entry x:Name="profSenha" IsPassword="True"></Entry>
-                <Label Text="Confirmar senha:"/>
-                <Entry x:Name="profSenhaConfirm" IsPassword="True"></Entry>
-                <Button Text="Cadastrar" Clicked="btnSalvar_Click"/>
+                    <Label Text="Nome:"/>
+                    <Entry x:Name="profNome"></Entry>
+                    <Label Text="Sobrenome:"/>
+                    <Entry x:Name="profSobrenome"></Entry>
+                    <Label Text="Cep"/>
+                    <Entry x:Name="profCep" Placeholder="Digite o CEP, Somente números..">
+                    </Entry>
+                    <Label Text="Rua:"/>
+                    <Entry x:Name="profRua"></Entry>
+                    <Label Text="Bairro:"/>
+                    <Entry x:Name="profBairro"></Entry>
+                    <Label Text="Cidade:"/>
+                    <Entry x:Name="profCidade"></Entry>
+                    <Label Text="UF:"/>
+                    <Entry x:Name="profUf"></Entry>
+                    <Label Text="Numero:"/>
+                    <Entry x:Name="profNumero"></Entry>
+                    <Label Text="Complemento:"/>
+                    <Entry x:Name="profComplemento"></Entry>
+                    <Picker x:Name="profDisciplina" SelectedIndex="1"/>
+                    <Label Text="Mail:"/>
+                    <Entry x:Name="profMail"></Entry>
+                    <Label Text="Telefone Celular:"/>
+                    <Entry x:Name="profCel"></Entry>
+                    <Label Text="Telefone Fixo:"/>
+                    <Entry x:Name="profFixo"></Entry>
+                    <Label Text="Valor da aula:"/>
+                    <Entry x:Name="profValor"></Entry>
+                    <Label Text="Usuário:"/>
+                    <Entry x:Name="profUsuario"></Entry>
+                    <Label Text="Senha:"/>
+                    <Entry x:Name="profSenha" IsPassword="True"></Entry>
+                    <Label Text="Confirmar senha:"/>
+                    <Entry x:Name="profSenhaConfirm" IsPassword="True"></Entry>
+                    <Button Text="Cadastrar" Clicked="btnSalvar_Click"/>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
