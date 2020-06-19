@@ -31,7 +31,7 @@ namespace ReforceCross.Views
 
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private async void btnSalvar_Click(object sender, EventArgs e)
         {
             if (profSenha.Text == profSenhaConfirm.Text)
             {
@@ -47,16 +47,18 @@ namespace ReforceCross.Views
                     profUf.Text,
                     int.Parse(profNumero.Text),
                     profComplemento.Text,
+                    profMail.Text,
                     profFixo.Text,
                     profCel.Text,
-                    profMail.Text,
                     SqlMoney.Parse(profValor.Text),
                     profUsuario.Text,
                     profSenha.Text,
                     'P'
                     );
-                /*public void Cadastrar(DateTime dtcadastro, string nome, string sobrenome, string cep, string rua, string bairro, 
-            string cidade,string uf, int numero, string complemento, string fixo, string celular, string mail, char disp, 
+                DisplayAlert("Cadastro Concluido", "Vlw!", "Ok!");
+                await Navigation.PushAsync(new MainPage());
+                /*public void Cadastrar(DateTime dtcadastro, string nome, string sobrenome, string cep, string rua, string bairro,
+            string cidade, string uf, int numero, string complemento, string mail, string fixo, string celular,
             SqlMoney valor, string loginuser, string senha, char tipousuario)*/
             }
             else

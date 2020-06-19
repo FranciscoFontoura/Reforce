@@ -11,7 +11,7 @@ namespace ReforceCross.Controllers
 
         public ConexaoSql()
         {
-            con.ConnectionString = "Data Source = DESKTOP-99ATQQ4; Initial Catalog = DBTRABALHO;user= sa;password = 1234";
+            con.ConnectionString = @"Data Source =.\SQLEXPRESS; Initial Catalog = DBTRABALHO;user= sa;password = 1234";
         }
 
         public void ExercutarComandoSQL(SqlCommand sqlCommand)
