@@ -38,7 +38,7 @@
                     <Entry x:Name="profComplemento"></Entry>
                     <Label Text="Telefone Fixo:"/>
                     <Entry x:Name="profFixo"></Entry>
-                    <Picker x:Name="profDisponibilidade" SelectedIndex="-1"/>
+ 
                     <Label Text="Valor da aula:"/>
                     <Entry x:Name="profValor"></Entry>
                     <Label Text="Usuário:"/>

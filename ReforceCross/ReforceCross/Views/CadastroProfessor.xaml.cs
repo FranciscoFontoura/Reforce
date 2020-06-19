@@ -20,18 +20,13 @@ namespace ReforceCross.Views
         public CadastroProfessor()
         {
             InitializeComponent();
+            
             profDisciplina.Title = "Selecione uma Disciplina";
             List<Disciplinas> disciplinas = new DisciplinasViewModel().LoadList();
 
             foreach (Disciplinas disciplina in disciplinas)
             {
                 profDisciplina.Items.Add(disciplina.NOME);
-            }
-            profDisponibilidade.Title = "Selecione sua Disponibilidade!";
-            var disponibilide = new List<string> { "A", "O", "P" };
-            foreach (String disp in disponibilide)
-            {
-                profDisponibilidade.Items.Add(disp);
             }
 
         }
@@ -55,7 +50,6 @@ namespace ReforceCross.Views
                     profFixo.Text,
                     profCel.Text,
                     profMail.Text,
-                    (char)profDisciplina.SelectedItem,
                     SqlMoney.Parse(profValor.Text),
                     profUsuario.Text,
                     profSenha.Text,
