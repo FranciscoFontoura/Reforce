@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ReforceCross.Models
 {
-    class Usuarios
+    public class Usuarios
     {
 		public int ID { get; set; }
 		public string LOGINUSER { get; set; }

@@ -19,12 +19,12 @@ namespace ReforceCross
             InitializeComponent();
             
         }
-
+        //navega para a pagina de login do professor
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LoginProfessor());
         }
-
+        //navega para a pagina de lista de professores
         private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Main());

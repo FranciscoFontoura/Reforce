@@ -32,7 +32,7 @@ namespace ReforceCross.Views
             List<Usuarios> usuario = new List<Usuarios>();
             if (User.Text == null)
             {
-                DisplayAlert("usuario invalido", "favor inserir usuario", "ok");
+                await DisplayAlert("usuario invalido", "favor inserir usuario", "ok");
             }
             else
             {
@@ -42,7 +42,7 @@ namespace ReforceCross.Views
                 }
                 if (usuario[0].SENHA == Password.Text)
                 {
-                    await Navigation.PushAsync(new CadastroProfessor());
+                    await Navigation.PushAsync(new PerfilProfessor(usuario[0]));
                 }
                 else
                 {

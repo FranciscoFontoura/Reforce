@@ -17,7 +17,7 @@ namespace ReforceCross.ViewModel
         {
             Bairros = new List<Bairros>(LoadList());
         }
-
+        //carrega e retorna a lista e bairros unicos da tabela de professores do bd
         public List<Bairros> LoadList()
         {
             List<Bairros> bairros = new List<Bairros>();

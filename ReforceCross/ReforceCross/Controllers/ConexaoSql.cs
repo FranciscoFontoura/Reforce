@@ -13,7 +13,7 @@ namespace ReforceCross.Controllers
         {
             con.ConnectionString = @"Data Source =.\SQLEXPRESS; Initial Catalog = DBTRABALHO;user= sa;password = 1234";
         }
-
+        //metodo da classe que abre a conexão executa a query passada por parametro, depois fecha a conexão sql
         public void ExercutarComandoSQL(SqlCommand sqlCommand)
         {
             con.Open();

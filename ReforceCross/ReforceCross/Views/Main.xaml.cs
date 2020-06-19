@@ -17,7 +17,7 @@ namespace ReforceCross.Views
             InitializeComponent();
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
         }
-
+        //evento do clique na lista do menu hamburguer, volta para pagina principal
         private async void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             await Navigation.PushAsync(new MainPage());

@@ -27,6 +27,7 @@ namespace ReforceCross.Views
 
             ListView = profContatos;
 
+            //popula o picker com resultados da query de bairros unicos do bd
             picker_bairros.Title = "Selecione um Bairro";
             List<Bairros> bairros = new BairrosViewModel().LoadList();
             foreach (Bairros bairro in bairros)
@@ -34,7 +35,7 @@ namespace ReforceCross.Views
                 picker_bairros.Items.Add(bairro.BAIRRO);
             }
         }
-
+        //envia objeto professor para a view professoritemdetail para binding na proxima view (envia o objeto como parametro da nova pagina)
         private async void profContatos_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             Professor professor = e.Item as Professor;
@@ -46,6 +47,7 @@ namespace ReforceCross.Views
             await Navigation.PushAsync(new ProfessorItemDetail(professor));
         }
 
+        //atualiza o bindingcontext da pagina baseado na opção selecionada no picker (professorviewmodel com a sobrecarga string)
         private void picker_bairros_SelectedIndexChanged(object sender, EventArgs e)
         {
             BindingContext = new ProfessorViewModel(picker_bairros.SelectedItem.ToString());
