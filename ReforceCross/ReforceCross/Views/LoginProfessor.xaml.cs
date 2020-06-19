@@ -7,6 +7,9 @@ using System.Data.SqlClient;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ReforceCross.Models;
+using System.Data;
+using Dapper;
+using System.Net.Mail;
 
 namespace ReforceCross.Views
 {
@@ -16,7 +19,7 @@ namespace ReforceCross.Views
         public LoginProfessor()
         {
             InitializeComponent();
-            string senha = User.ToString();
+
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
@@ -24,8 +27,28 @@ namespace ReforceCross.Views
             await Navigation.PushAsync(new CadastroProfessor());
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
+            List<Usuarios> usuario = new List<Usuarios>();
+            if (User.Text == null)
+            {
+                DisplayAlert("usuario invalido", "favor inserir usuario", "ok");
+            }
+            else
+            {
+                using (IDbConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DBTRABALHO;User Id=sa;Password=1234;"))
+                {
+                    usuario = connection.Query<Usuarios>($"SELECT * FROM USUARIO WHERE LOGINUSER='{User.Text}'").ToList();
+                }
+                if (usuario[0].SENHA == Password.Text)
+                {
+                    await Navigation.PushAsync(new CadastroProfessor());
+                }
+                else
+                {
+                    await DisplayAlert("Senha ou usuário errado!", "favor tentar novamente", "ok!");
+                }
+            }
 
         }
     }

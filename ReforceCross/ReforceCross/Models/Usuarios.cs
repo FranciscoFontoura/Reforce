@@ -10,5 +10,6 @@ namespace ReforceCross.Models
 		public string LOGINUSER { get; set; }
 		public string TIPOUSUARIO { get; set; }
 		public int IDPROF { get; set; }
+		public string SENHA { get; set; }
 	}
 }

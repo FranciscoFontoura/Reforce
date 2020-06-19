@@ -25,7 +25,7 @@
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                     </Label.GestureRecognizers>
                 </Label>
-                <Button Text="Acessar" HorizontalOptions="Center" Margin="0,20,0,0"/>
+                <Button Text="Acessar" Clicked="Button_Clicked" HorizontalOptions="Center" Margin="0,20,0,0"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
