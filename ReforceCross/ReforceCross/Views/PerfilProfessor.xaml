@@ -8,31 +8,34 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" >
             <Label Text="Perfil do Professor" FontSize="Header"/>
-            <StackLayout Padding="5">
-                <StackLayout BackgroundColor="#F3F5F5" Orientation="Vertical" Padding="5">
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding NOME}" FontSize="Title"></Label>
-                        <Label Text="{Binding SOBRENOME}" FontSize="Title"></Label>
+
+            <StackLayout BackgroundColor="#F3F5F5" Orientation="Vertical" Padding="5">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding NOME}" FontSize="Title"></Label>
+                    <Label Text="{Binding SOBRENOME}" FontSize="Title"></Label>
+                </StackLayout>
+
             </StackLayout>
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical">
                 <Label Text="Endereço"/>
                 <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding RUA}" FontSize="Title"></Label>
-                            <Label Text="{Binding NÚMERO}" FontSize="Title"></Label>
-                            <Label Text="{Binding COMPLEMENTO}" FontSize="Title"></Label>
-                            <Label Text="{Binding BAIRRO}" FontSize="Title"></Label>
-             </StackLayout>
+                    <Label Text="{Binding RUA, StringFormat='Rua: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding NÚMERO,StringFormat='Numero: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding COMPLEMENTO, StringFormat='Complemento: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding BAIRRO,StringFormat='Bairro: {0}'}" FontSize="Title"></Label>
+                </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding CEP}" FontSize="Title"></Label>
-                            <Label Text="{Binding CIDADE}" FontSize="Title"></Label>
-                            <Label Text="{Binding UF}" FontSize="Title"></Label>
-                        </StackLayout>
+                    <Label Text="{Binding CEP,StringFormat='Cep: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding CIDADE,StringFormat='Cidade: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding UF, StringFormat='UF: {0}'}" FontSize="Title"></Label>
+                </StackLayout>
                 <StackLayout Orientation="Vertical" >
-                            <Label Text="{Binding MAIL}" FontSize="Title"></Label>
-                            <Label Text="{Binding TELEFONE CELUAR}" FontSize="Title"></Label>
-                            <Label Text="{Binding TELEFONE FIXO}" FontSize="Title"></Label>
-                            <Label Text="{Binding VALOR AULA}" FontSize="Title"></Label>
-                </StackLayout>                     
+                    <Label Text="{Binding MAIL, StringFormat='Email: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding CELULAR, StringFormat='Telefone: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding FIXO, StringFormat='Telefone Fixo: {0}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding VALORAULA, StringFormat='Valor da Aula: R${0:F2}'}" FontSize="Title"></Label>
+                    <Label Text="{Binding DISCIPLINA, StringFormat='Disciplinas Lecionadas: {0}'}" FontSize="Title"></Label>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
