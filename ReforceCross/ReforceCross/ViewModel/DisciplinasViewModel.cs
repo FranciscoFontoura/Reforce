@@ -12,6 +12,7 @@ using Xamarin.Forms;
 
 namespace ReforceCross.ViewModel
 {
+    //ViewModel disciplinas, que usa uma lista  de disciplias.
     class DisciplinasViewModel
     {
         public ObservableCollection<Disciplinas> Disciplinas { get; set; }
@@ -20,6 +21,7 @@ namespace ReforceCross.ViewModel
         {
             Disciplinas = new ObservableCollection<Disciplinas>(LoadList() as List<Disciplinas>);
         }
+        //Busca todas as disciplinas cadastradas no banco de dados e salva em uma lista .
         public List<Disciplinas> LoadList()
         {
             List<Disciplinas> disciplinas = new List<Disciplinas>();

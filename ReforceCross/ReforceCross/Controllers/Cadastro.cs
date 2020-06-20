@@ -11,6 +11,7 @@ using ReforceCross.Models;
 
 namespace ReforceCross.Controllers
 {
+    //Classe de cadastro
     class Cadastro
     {
         string Sql, Sql2, Sql3;
@@ -18,6 +19,7 @@ namespace ReforceCross.Controllers
         SqlCommand Command;
         ConexaoSql con = new ConexaoSql();
 
+        //Método para realizar o cadastro de um novo professor
         public void Cadastrar(DateTime dtcadastro, string nome, string sobrenome, string cep, string rua, string bairro,
             string cidade, string uf, int numero, string complemento, string mail, string fixo, string celular,
             SqlMoney valor, string loginuser, string senha, int discp, char tipousuario)
@@ -60,7 +62,7 @@ namespace ReforceCross.Controllers
             con.ExercutarComandoSQL(Command);
         }
 
-        //Busca o ID do Professor pra inserir na aula
+        //Método para Buscar o ID do Professor.
         private int GetIdProfessor()
         {
             List<int> ids = new List<int>();

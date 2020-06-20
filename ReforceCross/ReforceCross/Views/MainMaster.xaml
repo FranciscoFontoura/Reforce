@@ -7,6 +7,7 @@
              x:Class="ReforceCross.Views.MainMaster"
              Title="Master">
     <StackLayout>
+        <!--View da tela principal-->
         <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"

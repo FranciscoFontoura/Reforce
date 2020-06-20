@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ReforceCross.Views.LoginProfessor">
+    <!--View da tela de login professor-->
     <ContentPage.Content>
         <StackLayout>
             <StackLayout 

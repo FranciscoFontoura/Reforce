@@ -4,16 +4,16 @@ using System.Text;
 using System.Data.SqlClient;
 
 namespace ReforceCross.Controllers
-{
+{//Classe para realizar uma conexão com o banco.
     class ConexaoSql
     {
         SqlConnection con = new SqlConnection();
-
+        
         public ConexaoSql()
         {
             con.ConnectionString = @"Data Source =DESKTOP-99ATQQ4; Initial Catalog = DBTRABALHO;user= sa;password = 1234";
         }
-        //metodo da classe que abre a conexão executa a query passada por parametro, depois fecha a conexão sql
+        //Método para execução de query
         public void ExercutarComandoSQL(SqlCommand sqlCommand)
         {
             con.Open();

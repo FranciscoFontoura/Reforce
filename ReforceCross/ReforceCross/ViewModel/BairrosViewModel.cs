@@ -9,15 +9,15 @@ using System.Text;
 
 namespace ReforceCross.ViewModel
 {
+    //ViewModel de Bairros, que usa uma lista de bairros.
     class BairrosViewModel
     {
         public List<Bairros> Bairros { get; set; }
-
         public BairrosViewModel()
         {
             Bairros = new List<Bairros>(LoadList());
         }
-        //carrega e retorna a lista e bairros unicos da tabela de professores do bd
+        //Busca todos os bairros cadastrados no banco de dados e salva em uma lista .
         public List<Bairros> LoadList()
         {
             List<Bairros> bairros = new List<Bairros>();

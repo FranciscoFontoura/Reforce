@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="ReforceCross.Views.ProfessorItemDetail"
              Title="{Binding NOME}">
+    <!--View dos detalhes de cada professor-->
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">

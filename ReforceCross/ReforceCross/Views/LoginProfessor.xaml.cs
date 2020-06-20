@@ -16,17 +16,17 @@ namespace ReforceCross.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginProfessor : ContentPage
     {
+        
         public LoginProfessor()
         {
             InitializeComponent();
-
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new CadastroProfessor());
         }
-
+        //Ação do botão de login, que faz a vericação da senha.
         private async void Button_Clicked(object sender, EventArgs e)
         {
             List<Usuarios> usuario = new List<Usuarios>();

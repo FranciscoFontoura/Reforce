@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="ReforceCross.Views.PerfilProfessor">
     <ContentPage.Content>
+        <!--View do Perfil do professor-->
         <StackLayout Orientation="Vertical" >
             <Label Text="Perfil do Professor" FontSize="Header"/>
 

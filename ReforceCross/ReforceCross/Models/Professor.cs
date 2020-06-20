@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ReforceCross.Models
 {
+	//Model de professor
     public class Professor
     {
 		public int ID { get; set; }

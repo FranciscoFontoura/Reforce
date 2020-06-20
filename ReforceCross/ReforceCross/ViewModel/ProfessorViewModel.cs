@@ -11,20 +11,21 @@ using Xamarin.Forms;
 
 namespace ReforceCross.ViewModel
 {
+    //ViewModel de Professor, que busca a lista de professores do banco.
     public class ProfessorViewModel
     {
         public ObservableCollection<Professor> Professor { get; set; }
-        //primeiro construtor, sem parametros, para criar lista de todos os professores
+        //Primeiro construtor, sem parametros, para criar lista de todos os professores
         public ProfessorViewModel()
         {
             Professor = new ObservableCollection<Professor>(LoadList("") as List<Professor>);
         }
-        //segundo construtor, com sobrecarga string que cria a lista de professores filtradas por bairro
+        //Segundo construtor, com sobrecarga string que cria a lista de professores filtradas por bairro
         public ProfessorViewModel(string query)
         {
             Professor = new ObservableCollection<Professor>(LoadList(query) as List<Professor>);
         }
-        //metodo que retorna lista de professores baseada na query feita sob a lista de bairros
+        //Metodo que retorna lista de professores baseada na query feita sob a lista de bairros
         public List<Professor> LoadList(string query)
         {
             List<Professor> professores = new List<Professor>();

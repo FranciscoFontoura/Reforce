@@ -18,8 +18,10 @@ using System.Data;
 namespace ReforceCross.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+   
     public partial class CadastroProfessor : ContentPage
     {
+        //No construtor eu carrego as disciplinas em um picker, para seleção do usuário.
         public CadastroProfessor()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace ReforceCross.Views
             }
 
         }
-//Ação do clique do botão de cadastro
+//Ação do clique do botão de cadastro passando todos os dados inseridos pelo usuário.
         private async void btnSalvar_Click(object sender, EventArgs e)
         {
             if (profSenha.Text == profSenhaConfirm.Text)
@@ -69,7 +71,7 @@ namespace ReforceCross.Views
             }
         }
 
-        //Método que busca a ID da matéria
+        //Método que busca a ID da matéria, para que eu possa passar no cadastro.
         private int GetIdMateria()
         {
             List<int> id = new List<int>();

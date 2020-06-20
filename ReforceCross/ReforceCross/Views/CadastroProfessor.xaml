@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ReforceCross.Views.CadastroProfessor">
+    <!--View da tela de cadastro de professores! -->
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -38,7 +39,6 @@
                     <Entry x:Name="profComplemento"></Entry>
                     <Label Text="Telefone Fixo:"/>
                     <Entry x:Name="profFixo"></Entry>
- 
                     <Label Text="Valor da aula:"/>
                     <Entry x:Name="profValor"></Entry>
                     <Label Text="Usuário:"/>

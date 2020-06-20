@@ -8,6 +8,7 @@
              Title="Detail"
              NavigationPage.HasBackButton="True"
              NavigationPage.HasNavigationBar="False">
+    <!--View da página de aluno-->
     <StackLayout>
         <Label Text="Lista de Professores" FontSize="Header"/>
         <Picker x:Name="picker_bairros" SelectedIndexChanged="picker_bairros_SelectedIndexChanged"></Picker>
@@ -26,7 +27,7 @@
                                         <Label Text="{Binding SOBRENOME}" FontSize="Title"></Label>
                                     </StackLayout>
                                 </StackLayout>
-                                <Label Text="{Binding VALORAULA, StringFormat='Valor da hora R$ {0:F2}'}"></Label>
+                                <Label Text="{Binding VALORAULA, StringFormat='Valor da aula: R$ {0:F2}'}"></Label>
                                <Label Text="{Binding DISCIPLINA}" FontSize="Title" HorizontalOptions="End" ></Label>
                             </StackLayout>
                         </StackLayout>
